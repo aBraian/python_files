@@ -31,7 +31,7 @@ class GameCatalog:
             pattern (str): Patron para excluir los juegos.
 
         Returns:
-            GameCatalog: Objeto del tipo Games que contiene los juegos filtrados por genero.
+            class_type: Objeto del tipo GameCatalog que contiene los juegos filtrados por genero.
         """
         games_filter = GameCatalog()
         for game in self.list_games:
@@ -56,7 +56,7 @@ class GameCatalog:
             message (str): Mensaje que indica las decadas.
 
         Returns:
-            GameCatalog: Objeto del tipo Games que contiene los juegos filtrados por decada.
+            class_type: Objeto del tipo GameCatalog que contiene los juegos filtrados por decada.
         """
         games = GameCatalog()
         running = True
@@ -71,4 +71,66 @@ class GameCatalog:
             if len(games.list_games) == 0:
                 print("No se encontraron juegos de esa decada")
                 running = True
+        return games
+    
+    def copy(self) -> class_type:
+        """
+        Crea una copia del objeto GameCatalog.
+
+        Returns:
+            class_type: Un nuevo objeto GameCatalog que contiene una copia de los juegos.
+        """
+        copy = GameCatalog()
+        if len(self.list_games) > 0:
+            for game in self.list_games:
+                game_copy = Game(game.id_game, game.name, game.platform, game.mode, game.company, game.year, game.country, game.gender)
+                copy.list_games.append(game_copy)
+        return copy
+    
+    def bubble_sort(self, mode:bool) -> class_type:
+        """
+        Ordena los juegos en el objeto GameCatalog utilizando el algoritmo Bubble Sort.
+
+        Args:
+            mode (bool): Determina el modo de ordenamiento. True para orden descendente, False para orden ascendente.
+
+        Returns:
+            class_type: Un nuevo objeto GameCatalog que contiene los juegos ordenados.
+        """
+        swap = True
+        copy = self.copy()
+        if len(copy.list_games) > 0:
+            while swap:
+                swap = False
+                for i in range(len(copy.list_games) - 1):
+                    if mode:
+                        if copy.list_games[i].company < copy.list_games[i + 1].company:
+                            aux = copy.list_games[i]
+                            copy.list_games[i] = copy.list_games[i + 1]
+                            copy.list_games[i + 1] = aux
+                            swap = True
+                    else:   
+                        if copy.list_games[i].company > copy.list_games[i + 1].company:
+                            aux = copy.list_games[i]
+                            copy.list_games[i] = copy.list_games[i + 1]
+                            copy.list_games[i + 1] = aux
+                            swap = True
+        return copy
+
+    def search_mode(self, list_modes:list) -> class_type:
+        """
+        Filtra los juegos según los modos de juego especificados.
+
+        Args:
+            list_modes (list): Una lista de modos de juego en formato de cadena.
+
+        Returns:
+            class_type: Un objeto del tipo GameCatalog que contiene los juegos filtrados por modos de juego.
+        """
+        games = GameCatalog()
+        for mode in list_modes:
+            for game in self.list_games:
+                if re.search(mode, game.mode, re.IGNORECASE) != None:
+                    if game not in games.list_games:
+                        games.list_games.append(game)
         return games

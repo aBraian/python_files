@@ -2,6 +2,7 @@ from constants import *
 from file_control import *
 from games_catalog import *
 from input_data import *
+from menu import *
 
 file = read_json(JSON_PATH)
 
@@ -13,3 +14,15 @@ list_gender.print()
 decade = games.find_decade(MESSAGE_DECADE)
 
 decade.print()
+
+mode = choose_sorted()
+order = games.bubble_sort(mode)
+order.print()   
+
+print("")
+list_modes = [
+    "multijugador",
+    "cooperativo"
+]
+mode_search = games.search_mode(list_modes)
+mode_search.print()
