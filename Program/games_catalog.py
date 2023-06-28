@@ -66,7 +66,7 @@ class GameCatalog:
             decade = input_int("Ingresar una decada: ")
             if decade % 10 == 0:
                 for game in self.list_games:
-                    if int(game.year) >= decade and int(game.year) < decade + 10:
+                    if int(game.year) >= decade and int(game.year) < decade + 10: 
                         games.list_games.append(game)
             if len(games.list_games) == 0:
                 print("No se encontraron juegos de esa decada")

@@ -50,3 +50,5 @@ def write_csv(file_name:str, games:GameCatalog) -> None:
                 file_rows = parser_csv(games)
                 file.write(file_rows)
                 print("Se creó el archivo:", file.name)
+    else:
+        print("ERROR. No fue posible crear el archivo:", file_name)
