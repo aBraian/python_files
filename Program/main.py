@@ -20,9 +20,7 @@ order = games.bubble_sort(mode)
 order.print()   
 
 print("")
-list_modes = [
-    "multijugador",
-    "cooperativo"
-]
-mode_search = games.search_mode(list_modes)
+mode_search = games.search_mode("multijugador", "cooperativo")
 mode_search.print()
+
+write_csv(CSV_PATH, list_gender)

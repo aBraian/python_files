@@ -1,0 +1,18 @@
+id, name, platform, mode, company, year, country, gender
+1, Pac-Man, Arcade, Un jugador, Namco, 1980, Japon, Laberinto
+2, Tetris, Arcade, Un jugador, multijugador, The Tetris Company, 1984, Union Sovietica, Puzle
+3, Space Invaders, Arcade, Un jugador, Taito, 1978, Japon, Matamarcianos
+4, Mario Bros., Arcade, Un jugador, multijugador, Nintendo, 1983, EEUU, Plataformas
+5, Super Mario Bros., Arcade, Un jugador, dos jugadores, Nintendo, 1985, EEUU, Plataformas
+6, Donkey Kong, Arcade, Un jugador, dos jugadores, Nintendo, 1981, EEUU, Plataformas
+7, Asteroids, Arcade, Un jugador, multijugador, Atari, Inc., 1979, EEUU, Disparos
+8, Bubble Bobble, Arcade, Un jugador, dos jugadores, Taito, 1986, Japon, Plataformas
+9, Out run, Arcade, Un jugador, multijugador, Sega, 1986, Japon, Carreras
+10, Gyruss, Arcade, Un jugador, dos jugadores, Konami, 1983, Japon, Matamarcianos
+11, Galaga, Arcade, Un jugador, multijugador, Namco, 1981, Japon, Matamarcianos
+12, Qix, Arcade, Un jugador, Taito, 1981, Japon, Puzle
+16, Uncharted - El tesoro de Drake, Tercera persona, Un jugador, multijugador, Naughty Dog, 2007, EEUU, Accion-aventura
+17, Fortnite, Tercera persona, Un jugador, multijugador cooperativo, Epic Games, 2017, EEUU, Supervivencia, Mundo abierto, Battle Royale
+18, Fall Guys, Tercera persona, Multijugador, Epic Games, 2020, EEUU, Battle Royale, Plataformas
+19, Lego Batman, Tercera persona, Un jugador, Multijugador, Warner Bros. Interactive Entertainment, 2008, EEUU, Accion-aventura
+20, Spider-Man, Tercera persona, Un jugador, Insomniac Games, 2018, EEUU, Accion-aventura

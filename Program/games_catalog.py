@@ -116,19 +116,19 @@ class GameCatalog:
                             copy.list_games[i + 1] = aux
                             swap = True
         return copy
-
-    def search_mode(self, list_modes:list) -> class_type:
+    
+    def search_mode(self, *args) -> class_type:
         """
         Filtra los juegos según los modos de juego especificados.
 
         Args:
-            list_modes (list): Una lista de modos de juego en formato de cadena.
+            *args: Argumentos variables que contienen los modos de juego en formato de cadena.
 
         Returns:
             class_type: Un objeto del tipo GameCatalog que contiene los juegos filtrados por modos de juego.
         """
         games = GameCatalog()
-        for mode in list_modes:
+        for mode in args:
             for game in self.list_games:
                 if re.search(mode, game.mode, re.IGNORECASE) != None:
                     if game not in games.list_games:
